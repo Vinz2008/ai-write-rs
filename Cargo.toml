@@ -3,7 +3,9 @@ name = "ai-write"
 version = "0.1.0"
 edition = "2021"
 license = "GPL-3.0-or-later"
-homepage = ""
+homepage = "https://github.com/Vinz2008/ai-write-rs"
+repository = "https://github.com/Vinz2008/ai-write-rs"
+readme = "README.md"
 
 [lib]
 name = "ai_write"
