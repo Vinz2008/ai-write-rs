@@ -1,0 +1,20 @@
+[package]
+name = "ai-write"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+homepage = ""
+
+[lib]
+name = "ai_write"
+path = "src/lib.rs"
+proc-macro = true
+
+[[bin]]
+name = "ai-write-test"
+path = "src/bin.rs"
+
+[dependencies]
+syn = "1.0"
+quote = "1.0"
+openai_api_rust = "0.1.8"
