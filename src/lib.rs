@@ -34,10 +34,7 @@ fn get_from_ai(prompt : String, start_prompt : &'static str, randomness : Random
     let rs = openai.chat_completion_create(&body);
     let choice = rs.unwrap().choices;
     let message = &choice[0].message.as_ref().unwrap();
-    //println!("{}", message.content);
     message.content.clone()
-    //content
-    //"".to_string()
 }
 
 fn from_expr_to_string(expr : Expr) -> Result<String, String> {
@@ -63,7 +60,6 @@ pub fn ai_write(input: TokenStream) -> TokenStream {
     let input = parse_macro_input!(input as Expr);
     let arg = from_expr_to_string(input);
     let content = get_from_ai(arg.unwrap(), START_PROMPT, Randomness::NotRandom);
-    //println!("content : {}", content);
     let return_val = content.as_str().parse();
     match return_val {
         Result::Ok(v) => { 
@@ -74,8 +70,6 @@ pub fn ai_write(input: TokenStream) -> TokenStream {
             TokenStream::new()
         }
     }
-    //arg.unwrap().parse().unwrap()
-    //"let a = 2;".parse().unwrap()
 }
 
 #[proc_macro]
@@ -83,7 +77,6 @@ pub fn ai_write_expr(input: TokenStream) -> TokenStream {
     let input = parse_macro_input!(input as Expr);
     let arg = from_expr_to_string(input);
     let content = get_from_ai(arg.unwrap(), START_PROMPT_EXPR, Randomness::NotRandom);
-    //println!("content : {}", content);
     let return_val = content.as_str().parse();
     match return_val {
         Result::Ok(v) => { 
@@ -94,6 +87,4 @@ pub fn ai_write_expr(input: TokenStream) -> TokenStream {
             TokenStream::new()
         }
     }
-    //arg.unwrap().parse().unwrap()
-    //"let a = 2;".parse().unwrap()
 }
