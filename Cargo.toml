@@ -6,6 +6,7 @@ license = "GPL-3.0-or-later"
 homepage = "https://github.com/Vinz2008/ai-write-rs"
 repository = "https://github.com/Vinz2008/ai-write-rs"
 readme = "README.md"
+description = "Macro inserting ChatGPT responses into rust code at compile-time"
 
 [lib]
 name = "ai_write"
