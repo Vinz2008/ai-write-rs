@@ -6,7 +6,7 @@ Bring non-determinstic programming to Rust with AI
 
 macro functions
 - ai_write make ai (chatgpt) write code that is inserted (create aliases like i_am_a_lazy_dev or others)
-- random_shit_go_brrr : generate a random string / a random string with words then feed it to the ai to generate code (or just set randomness to very random)
+- random_shit_go_brrr : generate a random string / a random string with words then feed it to the ai to generate code (or just set randomness to very random) (TODO)
 
 ## How to use this
 
